@@ -10,5 +10,9 @@ curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/53
 $res = curl_exec($ch);
 $rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
 curl_close($ch) ;
+
+header("Content-Type: image/png");
+header("Content-Length: " . strlen($res));
+
 echo $res;
 ?>

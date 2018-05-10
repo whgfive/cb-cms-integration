@@ -7,5 +7,5 @@ $fp = fopen($cms_icon, 'r');
 //header("Content-Length: " . filesize($fp));
 
 //fpassthru($fp);
-echo filesize($fp);
+echo strlen($fp);
 ?>

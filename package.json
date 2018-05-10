@@ -1,5 +1,21 @@
 {
-  "name": "Dynamic Content Builder Block Generator",
+  "name": "content-builder-cms-integration",
   "version": "1.0.0",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "request": "^2.63.0",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  }
 }

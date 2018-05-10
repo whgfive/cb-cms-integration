@@ -1,46 +1,39 @@
-# Salesforce Custom Content Block SDK - Sitecore Mock up
+# node-js-getting-started
 
-## Changelog:
-- v1: 	Draft project skeleton
-- v2: 	Improved version with image presented in a list format
-- v2.1:	checkbox for scale to fit and align to center will automatically make changes to content block 
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
+This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-## Introduction:
-Hi my name is Chun Tat (CT), Solution Engineer in covering Asia markets. If you're here, it means that you're interested to get Sitecore content blocks into your Email Studio Editor. Do note that you will also need to create an Installed Package in your MC Account and a new Heroku project to host this.
+## Running Locally
 
-For more information, visit: https://developer.salesforce.com/docs/atlas.en-us.mc-app-development.meta/mc-app-development/content-sdk.htm
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
+```sh
+$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
+$ cd node-js-getting-started
+$ npm install
+$ npm start
+```
 
-Basically there are a couple of files in this Github repo where you can use. 
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
+## Deploying to Heroku
 
-- Index.php 
-	- This is for Heroku to run the static HTML page
+```
+$ heroku create
+$ git push heroku master
+$ heroku open
+```
+or
 
-- Composer.json
-	- Required to run these static HTML pages on Heroku
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-- Index.html
-	- This is where all the action takes place. Contains the javascript, html, etc. Currently this is not pulling data from Sitecore at all. All images URL are hardcoded. 
+## Documentation
 
-- DragIcon.png
-	- You must strictly follow this naming convention as this is how MC recognise which image to be used as drag icon
+For more information about using Node.js on Heroku, see these Dev Center articles:
 
-- Icon.png
-	- Same as bove
-
-- blocksdk.js
- 	- This is the Salesforce Content Block SDK. It allows you to get,set Content onto Email Editor Canvas
-
-- Package.json
-	- Part of the SDK 
-
-
-## Roadmap:
-- REST API integtation with a Sitecore instance
-
-
-# Important Note
-
-THIS IS JUST A MOCK UP/PROTOTYPE. IT IS NOT THE PRODUCTISED SITECORE CONNECTOR NOR HOW THE CONTENT BLOCK WILL EVENTUALLY LOOK LIKE. THIS IS PURELY FOR DEMONSTRATION OF THE "ART OF THE POSSIBLE" AND SHOULD NOT BE SOLD AS A COMMERCIALISED PRODUCT. #SAFEHARBOUR
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)

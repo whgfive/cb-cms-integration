@@ -16,7 +16,7 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 app.get('/', (req, res) => res.render('pages/index'));
 
-app.get(["/icon.png","dragIcon.png"], function(req, res) {
+app.get(["/icon.png","/dragIcon.png"], function(req, res) {
    var requestSettings = {
         url: cms_icon,
         method: 'GET',

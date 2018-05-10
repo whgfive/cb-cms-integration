@@ -22,7 +22,6 @@ app.get(["/icon.png","dragIcon.png"], function(req, res) {
         method: 'GET',
         encoding: null
     };
-    console.log(urler);
     request(requestSettings, function(error, response, body) {
         res.set('Content-Type', 'image/png');
         res.send(body);

@@ -1,9 +1,18 @@
 <?php
 $cms_icon = getenv('cms_icon');
-/*$fp = fopen($name, 'rb');
+$ch = curl_init($cms_icon);    
 
-header("Content-Type: image/png");
-header("Content-Length: " . filesize($name));*/
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-echo $cms_icon;
+$data = curl_exec($ch);
+curl_close($ch);
+
+if ($data === false) {
+        die('cURL failed');
+}
+
+header('Content-Type: image/png');
+header('Content-Length: ' . curl_getinfo( $ch, CURLINFO_CONTENT_LENGTH_DOWNLOAD ) );
+echo $data;
 ?>

@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const request = require('request')
-//const sharp = require('sharp');
+const sharp = require('sharp');
 
 const PORT = process.env.PORT || 5000
 var app = express();

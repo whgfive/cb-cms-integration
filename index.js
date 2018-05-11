@@ -24,6 +24,8 @@ app.get(["/icon.png","/dragIcon.png"], function(req, res) {
         encoding: null
     };
     request(requestSettings, function(error, response, body) {      
-        sharp(body).resize(40).pipe(res);
+    	//res.set('Content-Type', 'image/png');
+    	//var writeStream = fs.createWriteStream('resized.png');
+       	sharp(body).resize(40).pipe(res);
     });
 });

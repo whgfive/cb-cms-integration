@@ -1,0 +1,20 @@
+{
+	"nto":{
+		"img-src":[
+			"http:",
+			"http"
+		]	
+	},
+	"cumulus":{
+		"img-src":[
+			"http:",
+			"http"
+		]	
+	},
+	"scotts":{
+		"img-src":[
+			"http:",
+			"http"
+		]	
+	},
+}

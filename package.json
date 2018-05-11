@@ -4,7 +4,7 @@
   "description": "",
   "engines": {
     "node": "8.9.1",
-    "npm" : "*"
+    "npm": "^6.0.1"
   },
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,7 @@
     "express": "^4.15.2",
     "fs": "0.0.1-security",
     "node-gyp": "^3.6.2",
-    "request": "^2.63.0"
-  },
-  "devDependencies": {
-    "tape": "^4.7.0"
+    "request": "^2.63.0",
+    "sharp": "^0.20.2"
   }
 }

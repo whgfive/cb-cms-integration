@@ -1,2 +1,2 @@
-https://github.com/automata/heroku-buildpack-cairo.git
-https://github.com/heroku/heroku-buildpack-nodejs.git
+https://github.com/ddollar/heroku-buildpack-multi
+https://github.com/alex88/heroku-buildpack-vips.git

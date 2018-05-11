@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "preinstall": "npm install -g sharp"
   },
   "dependencies": {
     "ejs": "^2.5.6",

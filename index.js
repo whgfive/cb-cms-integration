@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const request = require('request')
+const sharp = require('sharp');
 
 const PORT = process.env.PORT || 5000
 var app = express();
@@ -22,8 +23,7 @@ app.get(["/icon.png","/dragIcon.png"], function(req, res) {
         method: 'GET',
         encoding: null
     };
-    request(requestSettings, function(error, response, body) {
-        res.set('Content-Type', 'image/png');
-        res.send(body);
+    request(requestSettings, function(error, response, body) {      
+        sharp(body).resize(40).pipe(res);
     });
 });

@@ -2,20 +2,43 @@ const express = require('express')
 const path = require('path')
 const request = require('request')
 const sharp = require('sharp');
+var fs = require('fs');
 
 const PORT = process.env.PORT || 5000
 var app = express();
 
-const cms_icon = process.env.cms_icon||'https://cdn.iconscout.com/public/images/icon/free/png-256/sitecore-logo-3ddc9d97c71aab37-256x256.png';
-const cms_logo = process.env.cms_logo||'https://www.sitecore.com/-/media/www/images/legal/sitecore1.jpg?la=en&hash=35BB41A72D7B3D5CB6E7F2250DE1A05E9D86D35F';
-const cms_name = process.env.cms_name||'Sitecore CMS';
+
+var cms_icon,cms_logo,cms_name = "";
+fs.readFile('cms-partners.json',
+	function(err, data) {		
+		var jsonData = data;
+		var jsonParsed = JSON.parse(jsonData);
+		cms_icon = process.env.cms_icon || jsonParsed.sitecore.cms_icon;
+		cms_logo = process.env.cms_logo || jsonParsed.sitecore.cms_logo_url;
+		cms_name = process.env.cms_name || jsonParsed.sitecore.cms_name;
+});
+
+var cms_images=[];
+fs.readFile('cb-content.json',
+	function(err, data) {		
+		var jsonData = data;
+		var jsonParsed = JSON.parse(jsonData);
+		cms_images = jsonParsed.travel.img_src;
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-app.get('/', (req, res) => res.render('pages/index'));
+app.get('/', function(req, res){
+	res.render('pages/index', {
+		"cms_icon":cms_icon,
+		"cms_logo":cms_logo,
+		"cms_name":cms_name,
+		"cms_images":cms_images
+	});
+}); 
 
 app.get(["/icon.png","/dragIcon.png"], function(req, res) {
    var requestSettings = {

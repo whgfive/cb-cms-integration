@@ -1,20 +1,22 @@
 {
+	"travel":{
+		"img_src":[
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image1.jpg",
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image2.jpg",
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image3.jpg",
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image4.jpg",
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image5.jpg",
+			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image6.jpg"
+		]	
+	},
 	"nto":{
-		"img-src":[
-			"http:",
-			"http"
+		"img_src":[
+			"http://ntoretail.com/images/home-mens.png",
+			"http://ntoretail.com/images/home-womens.png",
+			"http://ntoretail.com/images/home-kids.png",
+			"http://ntoretail.com/images/home-gear.png",
+			"http://ntoretail.com/images/home-electronics.png",
+			"http://ntoretail.com/images/home-energy-and-nutrition.png"
 		]	
-	},
-	"cumulus":{
-		"img-src":[
-			"http:",
-			"http"
-		]	
-	},
-	"scotts":{
-		"img-src":[
-			"http:",
-			"http"
-		]	
-	},
+	}
 }

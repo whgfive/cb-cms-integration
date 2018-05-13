@@ -1,17 +1,20 @@
-{
-	"sitecore":{
+[
+	{
+		"cms_id": "sitecore",
 		"cms_name": "Sitecore CMS",
 		"cms_icon": "https://cb-cms-integration.herokuapp.com/images/cms/sitecore-logo-icon.png",
 		"cms_logo_url": "https://cb-cms-integration.herokuapp.com/images/cms/sitecore-logo.png"	
 	},
-	"adobe":{
+	{
+		"cms_id": "adobe",
 		"cms_name": "Adobe AEM",
 		"cms_icon": "https://cb-cms-integration.herokuapp.com/images/cms/adobe-logo-icon.png",
 		"cms_logo_url": "https://cb-cms-integration.herokuapp.com/images/cms/adobe-logo.png"	
 	},
-	"wordpress":{
+	{
+		"cms_id": "wordpress",
 		"cms_name": "Wordpress",
 		"cms_icon": "https://cb-cms-integration.herokuapp.com/images/cms/wordpress-logo-icon.png",
 		"cms_logo_url": "https://cb-cms-integration.herokuapp.com/images/cms/wordpress-logo.png"	
 	}	
-}
+]

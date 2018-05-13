@@ -1,5 +1,6 @@
-{
-	"travel":{
+[
+	{
+		"id":"travel",
 		"img_src":[
 			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image1.jpg",
 			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image2.jpg",
@@ -9,7 +10,8 @@
 			"https://cb-cms-integration.herokuapp.com/images/collections/travel/image6.jpg"
 		]	
 	},
-	"nto":{
+	{
+		"id":"nto",
 		"img_src":[
 			"http://ntoretail.com/images/home-mens.png",
 			"http://ntoretail.com/images/home-womens.png",
@@ -18,5 +20,5 @@
 			"http://ntoretail.com/images/home-electronics.png",
 			"http://ntoretail.com/images/home-energy-and-nutrition.png"
 		]	
-	}
-}
+	}	
+]

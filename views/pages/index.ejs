@@ -1,59 +1,76 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-    .ctstyle{
-      font-family: Verdana;
-      font-size: 14px;
-    }
-    .itemlist{
-      font-size: 12px;
-    }
-    </style>
-    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="javascript/blocksdk.js"></script>
-  </head>
-  <body>
-    <p class="ctstyle" align="center">
-      <img width="80%" src="<%= cms_logo %>" />
-      <br />
-      Select an image to from <%= cms_name %>
-      <br />
-      <input type="checkbox" id="scaleFit" onclick="javascript:chosen('')" value="Yes" ><span class="itemlist" style="padding-left: 10px;padding-right: 10px;">Scale to fit</span></input>
-      <input type="checkbox" id="alignCenter" onclick="javascript:chosen('')" value="Yes" ><span class="itemlist" style="padding-left: 10px;padding-right: 10px;">Align to Center</span></input>
-    </p>
-    <div >
-      <div class="list-group" id="list-tab" role="tablist">
-        <% for (var i = 0; i < cms_images.length; i++) { %>
-              <a class="list-group-item list-group-item-action ctstyle itemlist" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" onclick="javascript:chosen('image<%= i %>')"><image width="20%" id="image<%= i %>" src="<%= cms_images[i] %>" /> <span style="padding-left: 20px">Image <%= i %></span></a>
-        <% } %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/salesforce-lightning-design-system.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="javascript/blocksdk.js"></script>
+  <script src="javascript/main.js"></script>
+</head>
+
+<body>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-large-size_1-of-1">
+      <div class="slds-grid slds-container slds-m-top--xx-large">
+        <div class="slds-col">
+          <div class="step slds-container--large slds-container--center">
+            <div class="slds-page-header">
+              <div class="slds-media">
+                <div class="slds-media__body">
+                  <img width="80%" src="<%= cms_logo %>" />
+                </div>
+              </div>
+            </div>
+            <div class="slds-card">
+              <div class="slds-p-around_medium">
+                <fieldset class="slds-form-element">
+                  <h3 class="slds-text-heading--medium">Configuration</h3>
+                  <br>
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox_button-group">
+                      <span class="slds-button slds-checkbox_button">
+<input type="checkbox" id="scaleFit" value="Scale to Fit" name="checkbox" onclick="javascript:chosen('')"/>
+<label class="slds-checkbox_button__label" for="scaleFit">
+<span class="slds-checkbox_faux">Scale to Fit</span>
+                      </label>
+                      </span>
+                      <span class="slds-button slds-checkbox_button">
+<input type="checkbox" id="alignCenter" value="Align to Center" name="checkbox" onclick="javascript:chosen('')"/>
+<label class="slds-checkbox_button__label" for="alignCenter">
+<span class="slds-checkbox_faux">Align to Center</span>
+                      </label>
+                      </span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="slds-box">
+              <h3 class="slds-text-heading--medium">Select image from <%= cms_name %></h3>
+              <div class="slds-grid slds-wrap" id="templatediv">
+                <% for (var i = 0; i < cms_images.length; i++) { %>
+                  <div class="demo-only slds-size_1-of-1">
+                    <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                      <div class="slds-box" style="width: 100%">
+                        <div class="slds-media">
+                          <div class="slds-media__body">
+                            <image width="20%" id="image<%= i %>" src="<%= cms_images[i] %>" /> <span style="padding-left: 20px">Image <%= i+1 %></span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <script>
-    var selectedImageId, image;
-    function chosen(imgId) {
-      var sdk = new window.sfdc.BlockSDK();
-      sdk.setContent("");
-      var fit = document.getElementById("scaleFit").checked;
-      var acenter = document.getElementById("alignCenter").checked;
-      selectedImageId = imgId;
-      if (imgId != "") {
-        image = document.getElementById(imgId).src;
-      }
-      if (fit) {
-        sdk.setContent("<img width='100%' src='" + image + "'/>");
-      } else {
-        if (acenter) {
-          sdk.setContent("<center><img src='" + image + "'/></center>");
-        } else {
-          sdk.setContent("<img src='" + image + "'/>");
-        }
-      }
-    }
-  </script>
 </body>
+
 </html>

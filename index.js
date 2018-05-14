@@ -39,11 +39,13 @@ app.set('view engine', 'ejs');
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 app.use((req, res, next) => {
-  const test = /\?[^]*\//.test(req.url);
-  if (req.url.substr(-1) === '/' && req.url.length > 1 && !test)
-    res.redirect(301, req.url.slice(0, -1));
-  else
-    next();
+  	const test = /(\/)\/+/g.test(req.url);
+	var pather = req.url;
+	clean_url = pather.replace(/(\/)\/+/g, "$1");
+  	if (clean_url.length > 1 && test)
+    	res.redirect(301, clean_url);
+  	else
+    	next();
 });
 
 app.get('/', function(req, res){

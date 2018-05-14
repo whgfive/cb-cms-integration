@@ -59,7 +59,7 @@ $(function() {
             cms_icon = $('#cms_icon_url').val();
             cms_logo = $('#cms_logo_url').val();
             cms_name = $('#cms_name').val();
-            cms_is = "other_cms";
+            cms_id = "other_cms";
 
             var build_url = "https://heroku.com/deploy?template=https://github.com/whgfive/cb-cms-integration&env[cms_name]="+cms_name+"&env[cms_icon]="+cms_icon+"&env[cms_logo]="+cms_logo+"&env[cms_id]="+cms_id+"&env[cms_brand]="+brand;
 

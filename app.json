@@ -3,21 +3,27 @@
   "description": "This application allows you to select a packaged or custom 3rd party CMS to represent an art-the-possible integration approach.",
   "website": "https://cb-cms-integration.herokuapp.com/install",
   "repository": "https://github.com/whgfive/cb-cms-integration",
+  "logo": "http://cb-cms-integration.herokuapp.com/images/logo.svg",
   "env": {
     "cms_brand": {
-      "description": "Which branded images to utilize. Based on industries."
+      "description": "Which branded images to utilize. Based on industries.",
+      "value": ""
     },
     "cms_icon": {
-      "description": "Hosted icon url."
+      "description": "Hosted icon url.",
+      "value": ""
     },
     "cms_id": {
-      "description": "Internal id."
+      "description": "Internal id.",
+      "value": ""
     },
     "cms_logo": {
-      "description": "Hosted logo url."
+      "description": "Hosted logo url.",
+      "value": ""
     },
     "cms_name": {
-      "description": "Name of CMS."
+      "description": "Name of CMS.",
+      "value": ""
     },
   },
   "image": "heroku/nodejs",

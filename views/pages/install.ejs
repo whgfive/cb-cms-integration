@@ -1,37 +1,123 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-    .ctstyle{
-      font-family: Verdana;
-      font-size: 14px;
-    }
-    .itemlist{
-      font-size: 12px;
-    }
-    </style>
-    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </head>
-  <body>
-      <div>
-      	Pick your Brand:
-      	<select name="brand" multiple>
-      		<% Object.keys(cms_content).forEach(function(key) { %> 
-    			<option value="<%= cms_content[key].id %>"><%= cms_content[key].id %></option>
-			<% }) %>
-      	</select>
-      </div>
-      <div>
-      	Pick your Partner:
-      	<select name="partner" multiple>
-      		<% Object.keys(cms_partners).forEach(function(key) { %> 
-    			<option value="<%= cms_partners[key].cms_id %>"><%= cms_partners[key].cms_id %></option>
-			<% }) %>
-      	</select>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
 
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketing Cloud Content Builder SDK Loader Nine Thousand</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/salesforce-lightning-design-system.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="javascript/blocksdk.js"></script>
+  <script src="javascript/main.js"></script>
+</head>
+
+<body>
+  <div class="slds-grid slds-wrap slds-gutters">
+    <nav class="slds-col slds-size--1-of-1">
+      <div style="height: 3rem;">
+        <div class="slds-context-bar">
+          <div class="slds-context-bar__primary">
+            <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+              <div class="slds-context-bar__icon-action">
+                <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                  <span class="slds-icon-waffle">
+                                    <span class="slds-r1"></span>
+                  <span class="slds-r2"></span>
+                  <span class="slds-r3"></span>
+                  <span class="slds-r4"></span>
+                  <span class="slds-r5"></span>
+                  <span class="slds-r6"></span>
+                  <span class="slds-r7"></span>
+                  <span class="slds-r8"></span>
+                  <span class="slds-r9"></span>
+                  </span>
+                  <span class="slds-assistive-text">Open App Launcher</span>
+                </button>
+              </div>
+              <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                <span class="slds-truncate" title="App Name">Custom CMS Deploy</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="slds-col slds-large-size_7-of-12">
+      <div class="slds-grid slds-container--center slds-m-top--xx-large">
+        <div class="slds-col">
+          <div class="step slds-container slds-container--center slds-box">
+            <h3 class="slds-text-heading--medium">Content Builder Custom CMS Deployer</h3>
+            <p class="slds-p-vertical--medium">This application allows you to select a packaged or custom 3rd party CMS to represent an art-the-possible integration approach. Here's what you'll need to get started.</p>
+            <ul class="slds-list_dotted">
+              <li>Active Heroku account</li>
+              <li>Select existing 3rd party CMS or other</li>
+              <li>Provide CMS Name, Logo URL, and Icon URL for non-existing CMS</li>
+              <li>Select industry related creative assets (via salesforcedemo.com)</li>
+              <li>Once deployed, simply copy the URL into your Learning Account Integrations</li>
+            </ul>
+            <br>
+            <form class="slds-form--vertical">
+              <div class="slds-form-element">
+                <label class="slds-form-element__label" for="brand">Industry/Brand</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-select_container">
+                    <select class="slds-select" id="brand">
+                      <option value="">Please select</option>
+                      <% for (var i = 0; i < cms_content.length; i++) { %>
+                        <option value="<%=cms_content[i].id%>"><%=cms_content[i].id%></option>
+                      <% } %>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-form-element">
+                <label class="slds-form-element__label" for="cms">3rd Party CMS</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-select_container">
+                    <select class="slds-select" id="cms">
+                      <option value="">Please select</option>
+                      <% for (var i = 0; i < cms_partners.length; i++) { %>
+                        <option value="<%=cms_partners[i].cms_id%>"><%=cms_partners[i].cms_name%></option>
+                      <% } %>
+                        <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-form-element" id="other_cms" style="display:none;">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="cms_name">Other CMS Name</label>
+                  <div class="slds-form-element__control">
+                    <input type="text" id="cms_name" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required=""/>
+                  </div>
+                </div>
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="cms_logo_url">Other CMS Logo URL</label>
+                  <div class="slds-form-element__control">
+                    <input type="text" id="cms_logo_url" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required="" />
+                  </div>
+                </div>
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="cms_icon_url">Other CMS ICON URL</label>
+                  <div class="slds-form-element__control">
+                    <input type="text" id="cms_icon_url" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required="" />
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="slds-form-element">
+                <a href="" style="display: noe;" id="deployIt">
+                  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+                </a>
+              </div>
+            </form>
+            <p class="slds-p-vertical--medium"><strong>Note: if you'd like to suggest new CMS partners or additional image assets, please send an email to William Garrison (wgarrison@salesforce.com).</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

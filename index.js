@@ -13,7 +13,7 @@ var cms_icon,cms_logo,cms_name = "";
 var cms_images,cms_partners_json,cms_content=[];
 var cms_brand = process.env.cms_brand || 'nto';
 
-fs.readFile('cms-partners.json',
+fs.readFile('./javascript/cms-partners.json',
 	function(err, data) {		
 		var jsonData = data;
 		var jsonParsed = JSON.parse(jsonData);
@@ -24,7 +24,7 @@ fs.readFile('cms-partners.json',
 		cms_id = process.env.cms_id || jsonParsed[0].cms_id;
 });
 
-fs.readFile('cb-content.json',
+fs.readFile('./javascript/cb-content.json',
 	function(err, data) {		
 		var jsonData = data;
 		var jsonParsed = JSON.parse(jsonData);

@@ -1,5 +1,32 @@
 {
-  "name": "Dynamic Content Builder Block Generator",
-  "version": "1.0.0",
-  "description": ""
+  "name": "Content Builder SDK Deploy",
+  "description": "This application allows you to select a packaged or custom 3rd party CMS to represent an art-the-possible integration approach.",
+  "website": "https://cb-cms-integration.herokuapp.com/install",
+  "repository": "https://github.com/whgfive/cb-cms-integration",
+  "env": {
+    "cms_brand": {
+      "description": "Which branded images to utilize. Based on industries."
+    },
+    "cms_icon": {
+      "description": "Hosted icon url."
+    },
+    "cms_id": {
+      "description": "Internal id."
+    },
+    "cms_logo": {
+      "description": "Hosted logo url."
+    },
+    "cms_name": {
+      "description": "Name of CMS."
+    },
+  },
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+    	"url": "https://github.com/alex88/heroku-buildpack-vips.git"
+    },
+    {
+    	"url": "heroku/nodejs"
+    }
+  ]
 }

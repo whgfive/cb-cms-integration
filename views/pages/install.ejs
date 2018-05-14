@@ -54,7 +54,7 @@
               <li>Select existing 3rd party CMS or other</li>
               <li>Provide CMS Name, Logo URL, and Icon URL for non-existing CMS</li>
               <li>Select industry related creative assets (via salesforcedemo.com)</li>
-              <li>Once deployed, simply copy the URL into your Learning Account Integrations</li>
+              <li>Once deployed, simply copy the URL into your Learning Account Installed Packages -> Custom Content Block</li>
             </ul>
             <br>
             <form class="slds-form--vertical">
@@ -89,25 +89,25 @@
                 <div class="slds-form-element">
                   <label class="slds-form-element__label" for="cms_name">Other CMS Name</label>
                   <div class="slds-form-element__control">
-                    <input type="text" id="cms_name" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required=""/>
+                    <input type="text" id="cms_name" class="slds-input" placeholder="Sitecore CMS" autocomplete="off" required=""/>
                   </div>
                 </div>
                 <div class="slds-form-element">
                   <label class="slds-form-element__label" for="cms_logo_url">Other CMS Logo URL</label>
                   <div class="slds-form-element__control">
-                    <input type="text" id="cms_logo_url" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required="" />
+                    <input type="text" id="cms_logo_url" class="slds-input" placeholder="https://cb-cms-integration.herokuapp.com/images/cms/sitecore-logo.png" autocomplete="off" required="" />
                   </div>
                 </div>
                 <div class="slds-form-element">
                   <label class="slds-form-element__label" for="cms_icon_url">Other CMS ICON URL</label>
                   <div class="slds-form-element__control">
-                    <input type="text" id="cms_icon_url" class="slds-input" placeholder="Placeholder Text" autocomplete="off" required="" />
+                    <input type="text" id="cms_icon_url" class="slds-input" placeholder="https://cb-cms-integration.herokuapp.com/images/cms/sitecore-logo-icon.png" autocomplete="off" required="" />
                   </div>
                 </div>
               </div>
               <br>
               <div class="slds-form-element">
-                <a href="" style="display: noe;" id="deployIt">
+                <a href="" style="display: none;" id="deployIt">
                   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
                 </a>
               </div>

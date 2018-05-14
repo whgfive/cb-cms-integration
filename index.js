@@ -38,6 +38,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
+app.use((req, res, next) => {
+  const test = /\?[^]*\//.test(req.url);
+  if (req.url.substr(-1) === '/' && req.url.length > 1 && !test)
+    res.redirect(301, req.url.slice(0, -1));
+  else
+    next();
+});
+
 app.get('/', function(req, res){
 	res.render('pages/index', {
 		"cms_icon":cms_icon,

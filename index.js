@@ -21,6 +21,7 @@ fs.readFile('cms-partners.json',
 		cms_icon = process.env.cms_icon || jsonParsed[0].cms_icon;
 		cms_logo = process.env.cms_logo || jsonParsed[0].cms_logo_url;
 		cms_name = process.env.cms_name || jsonParsed[0].cms_name;
+		cms_id = process.env.cms_id || jsonParsed[0].cms_id;
 });
 
 fs.readFile('cb-content.json',

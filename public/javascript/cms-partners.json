@@ -16,5 +16,11 @@
 		"cms_name": "Wordpress",
 		"cms_icon": "https://cb-cms-integration.herokuapp.com/images/cms/wordpress-logo-icon.png",
 		"cms_logo_url": "https://cb-cms-integration.herokuapp.com/images/cms/wordpress-logo.png"	
-	}	
+	},
+	{
+		"cms_id": "drupal",
+		"cms_name": "Drupal",
+		"cms_icon": "https://cb-cms-integration.herokuapp.com/images/cms/drupal-logo-icon.png",
+		"cms_logo_url": "https://cb-cms-integration.herokuapp.com/images/cms/drupal-logo.png"	
+	}		
 ]

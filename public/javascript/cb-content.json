@@ -1,5 +1,18 @@
 [
   {
+    "id": "godaddy",
+    "img_src": [
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/domainhosting.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddyaffiliate.png",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddydomain.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddydomain2.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddydomainhosting2.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddyecomm.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddysslcerts.jpg",
+      "https://cb-cms-integration.herokuapp.com/images/collections/godaddy/godaddysslcerts2.png"
+    ]
+  },
+  {
     "id": "palonia",
     "img_src": [
       "https://cb-cms-integration.herokuapp.com/images/collections/palonia/palonia1.jpg",

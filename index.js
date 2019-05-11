@@ -12,7 +12,7 @@ var app = express();
 var cms_icon,cms_logo,cms_name = "";
 var cms_images,cms_partners_json,cms_content=[];
 
-var cms_brand = process.env.cms_brand || 'nto';
+var cms_brand = process.env.cms_brand || 'nto'; //added
 
 fs.readFile('./public/javascript/cms-partners.json',
 	function(err, data) {		

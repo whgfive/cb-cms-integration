@@ -30,7 +30,7 @@ fs.readFile('./public/javascript/cb-content.json',
 		var jsonData = data;
 		var jsonParsed = JSON.parse(jsonData);
 		cms_content = jsonParsed;
-		cms_images = lodash.filter(jsonParsed, { 'id': cms_brand })[0].img_src;
+		cms_images = "godaddy";//lodash.filter(jsonParsed, { 'id': cms_brand })[0].img_src;
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
